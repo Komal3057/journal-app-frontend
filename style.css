@@ -1,0 +1,178 @@
+/* style.css */
+/* Background color animation */
+@keyframes bgColorCycle {
+  0% {
+    background-color: #f9fafb;
+  }
+  33% {
+    background-color: #ffe4e6;
+  }
+  66% {
+    background-color: #e0f2fe;
+  }
+  100% {
+    background-color: #f9fafb;
+  }
+}
+
+body {
+  animation: bgColorCycle 20s infinite alternate ease-in-out;
+  position: relative;
+  overflow-x: hidden; /* prevent horizontal scroll from petals */
+}
+
+/* Container for petals */
+.falling-flowers {
+  position: fixed;
+  top: 0;
+  width: 50px;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#falling-flowers-left {
+  left: 0;
+}
+
+#falling-flowers-right {
+  right: 0;
+}
+
+/* Single petal style */
+.petal {
+  position: absolute;
+  top: -40px;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="12" fill="pink" /><path d="M32 20 L36 28 L44 28 L38 34 L40 42 L32 38 L24 42 L26 34 L20 28 L28 28 Z" fill="%23ff69b4"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+  animation-timing-function: linear;
+  animation-name: fall;
+  animation-iteration-count: infinite;
+}
+
+/* Falling animation */
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: #f9fafb;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  letter-spacing: 1.2px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 15px;
+  font-size: 1.1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  box-shadow: inset 0 2px 5px rgb(0 0 0 / 0.05);
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  margin-bottom: 15px;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #4f46e5; /* Indigo-600 */
+  box-shadow: 0 0 8px #4f46e5aa;
+}
+
+button {
+  background: #4f46e5; /* Indigo-600 */
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 4px 8px rgb(79 70 229 / 0.3);
+}
+
+button:hover {
+  background: #4338ca; /* Indigo-700 */
+}
+
+h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #444;
+}
+
+#entries {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.entry {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.07);
+  transition: box-shadow 0.3s ease;
+}
+
+.entry:hover {
+  box-shadow: 0 4px 20px rgb(0 0 0 / 0.12);
+}
+
+.entry h3 {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  color: #222;
+}
+
+.entry p {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  white-space: pre-wrap; /* preserves line breaks */
+  color: #444;
+}
+
+.entry small {
+  color: #888;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 20px 15px;
+    padding: 0 10px;
+  }
+  textarea {
+    min-height: 100px;
+  }
+  button {
+    padding: 10px 18px;
+    font-size: 1rem;
+  }
+}
