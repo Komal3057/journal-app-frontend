@@ -3,9 +3,11 @@
 A simple journaling web app where you can write, save, and view your personal thoughts.
 Built with HTML, CSS, JavaScript (frontend) and Node.js, Express, MongoDB (backend).
 
-🚀 Live Demo
-Frontend (GitHub Pages): https://komal3057.github.io/journal-app-frontend/
-Backend API (Render): https://journal-app-1ctd.onrender.com/
+🚀 Live Demo:
+
+->Frontend (GitHub Pages): https://komal3057.github.io/journal-app-frontend/
+
+->Backend API (Render): https://journal-app-1ctd.onrender.com/
 
 🛠 Tech Stack
 Frontend:
@@ -29,3 +31,5 @@ Render hosting
 🎨 Animated flower background & dynamic colors
 🌐 Full-stack app with separate frontend and backend
 
+👩‍💻 Author
+Built with ❤️ by Komal.
